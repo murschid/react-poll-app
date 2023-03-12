@@ -18,7 +18,7 @@ class MainContent extends React.Component {
 		if (Object.keys(this.props.poll).length === 0) {
 			return (
 				<div>
-					<h3>Welcome to our App</h3>
+					<h3 className="text-uppercase fw-bolder">Welcome To My Poll Application</h3>
 					<p>some demo text text</p>
 				</div>
 			);
@@ -51,6 +51,10 @@ class MainContent extends React.Component {
 						/>
 					</ModalBody>
 				</Modal>
+				<hr/>
+				<div className="mt-1">
+					<h5 className="text-uppercase">Your Opinions Are Here</h5>
+				</div>
 			</div>
 		);
 	}

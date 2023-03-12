@@ -33,7 +33,7 @@ class Sidebar extends React.Component {
 						Create
 					</Button>
 				</div>
-				<h3>List Of Polls</h3>
+				<h4 className="text-uppercase">List Of Polls</h4>
 				<hr />
 				<PollList
 					polls={this.props.polls}
