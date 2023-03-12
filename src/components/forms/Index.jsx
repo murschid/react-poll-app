@@ -13,6 +13,8 @@ class PollForm extends React.Component {
 		description: "",
 		options: initOptions,
 		errors: {},
+		message: "",
+		errMsg: ""
 	};
 
 	componentDidMount() {
@@ -48,7 +50,7 @@ class PollForm extends React.Component {
 			});
 			this.setState({ options });
 		} else {
-			alert("You can create maximum five options");
+			this.setState({ errMsg: "You can create maximum five options" });
 		}
 	};
 
@@ -58,7 +60,7 @@ class PollForm extends React.Component {
 			options.splice(index, 1);
 			this.setState({ options });
 		} else {
-			alert("You must have at least two options");
+			this.setState({ errMsg: "You must have at least two options" });
 		}
 	};
 
@@ -72,7 +74,7 @@ class PollForm extends React.Component {
 			if (this.props.isUpdate) {
 				poll.id = this.props.poll.id;
 				this.props.submit(poll);
-				alert("Poll has updated successfully");
+				this.setState({message: "Poll has updated successfully"});
 			} else {
 				this.props.submit(poll);
 				event.target.reset();
@@ -81,6 +83,7 @@ class PollForm extends React.Component {
 					description: "",
 					options: initOptions,
 					errors: {},
+					message: "Poll has created successfully",
 				});
 			}
 		} else {
@@ -109,7 +112,7 @@ class PollForm extends React.Component {
 
 		let optionErrors = [];
 		options.forEach((opt, index) => {
-			if (!opt) {
+			if (!opt.value) {
 				optionErrors[index] = "Option text is empty";
 			} else if (opt.length > 100) {
 				optionErrors[index] = "Option text is too long";
@@ -126,10 +129,12 @@ class PollForm extends React.Component {
 	};
 
 	render() {
-		const { title, description, options, errors } = this.state;
+		const { title, message, errMsg, description, options, errors } = this.state;
 		return (
 			<OptionForm
 				title={title}
+				message={message}
+				errMsg={errMsg}
 				description={description}
 				options={options}
 				buttonValue={this.props.buttonValue || "Create Poll"}

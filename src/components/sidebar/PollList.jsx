@@ -12,8 +12,8 @@ const PollList = (props) => {
 					key={index}
 					onClick={() => props.selectPoll(poll.id)}
 					className="cursor">
-					{poll.title.length > 30
-						? poll.title.substr(0, 30) + "..."
+					{poll.title.length > 40
+						? poll.title.substr(0, 40) + "..."
 						: poll.title}
 				</ListGroupItem>
 			))}

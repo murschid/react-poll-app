@@ -47,8 +47,12 @@ class App extends React.Component {
 	};
 
 	handleSearch = (searchTerm) => {
-		//TODO
+		this.setState({searchTerm});
 	};
+
+	performSearch = () => {
+		return this.state.polls.filter((poll) => poll.title.toLowerCase().includes(this.state.searchTerm.toLowerCase()));
+	}
 
 	getOpinion = (response) => {
 		const { polls } = this.state;
@@ -68,12 +72,13 @@ class App extends React.Component {
 	};
 
 	render() {
+		const polls = this.performSearch();
 		return (
-			<Container className="mt-5">
+			<Container className="mt-4">
 				<Row>
 					<Col md={4}>
 						<Sidebar
-							polls={this.state.polls}
+							polls={polls}
 							searchTerm={this.state.searchTerm}
 							handleSearch={this.handleSearch}
 							selectPoll={this.selectPoll}

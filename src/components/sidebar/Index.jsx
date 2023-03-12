@@ -30,7 +30,7 @@ class Sidebar extends React.Component {
 						color="success"
 						className="ms-2"
 						onClick={this.toggleModal}>
-						New
+						Create
 					</Button>
 				</div>
 				<h3>List Of Polls</h3>

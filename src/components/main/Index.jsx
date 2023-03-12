@@ -25,7 +25,7 @@ class MainContent extends React.Component {
 		}
 		const { poll, getOpinion, updatePoll, deletePoll } = this.props;
 		return (
-			<div>
+			<div className="bg-light p-3">
 				<h3>{poll.title}</h3>
 				<p>{poll.description}</p>
 				<br />

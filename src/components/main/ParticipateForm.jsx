@@ -1,5 +1,5 @@
 import React from "react";
-import {Form, FormGroup, FormFeedback, Input, Button, Label} from "reactstrap";
+import {Form, FormGroup, FormFeedback, Input, Button, Label, Badge} from "reactstrap";
 
 class ParticipateForm extends React.Component {
 	state = {
@@ -54,7 +54,7 @@ class ParticipateForm extends React.Component {
 		return (
 			<Form onSubmit={this.handleSubmit}>
 				<div className="d-flex">
-					<h4>Options</h4>
+					<h4>Options:</h4>
 					<Button type="button" color="info" className="ms-auto" onClick={this.props.toggleModal}>Edit</Button>
 					<Button type="button" color="danger" className="ms-2" onClick={()=> this.props.deletePoll(this.props.poll.id)}>Delete</Button>
 				</div>
@@ -62,8 +62,8 @@ class ParticipateForm extends React.Component {
 					<FormGroup className="my-2" key={index}>
 						<Label className="d-flex">
 							<Input type="radio" className="me-2" id={opt.id} name="selectedOption" value={opt.id} onChange={this.handleChange} invalid={this.state.errors.selectedOption ? true : false}/> {opt.value}
-							<span className="ms-auto px-3 bg-success text-white">{opt.vote}</span>
-							<span className="ms-2 px-3 bg-warning text-black" color="white">{this.props.poll.totalVote > 0 ? ((100 * opt.vote) / this.props.poll.totalVote).toFixed(2) : 0} %</span>
+							<span className="ms-auto rounded px-3 py-1 bg-success text-white">{opt.vote}</span>
+							<span className="ms-2 rounded px-3 py-1 bg-warning" color="white">{this.props.poll.totalVote > 0 ? ((100 * opt.vote) / this.props.poll.totalVote).toFixed(2) : 0} %</span>
 						</Label>
 					</FormGroup>
 				))}
