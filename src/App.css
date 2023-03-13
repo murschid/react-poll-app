@@ -1,6 +1,9 @@
 .App {
   text-align: center;
 }
+.height {
+  min-height: 88.5vh;
+}
 .cursor {
   cursor: pointer;
 }

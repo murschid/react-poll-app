@@ -2,9 +2,10 @@ import React from "react";
 import { Col, Container, Row } from "reactstrap";
 import shortid from "shortid";
 import MainContent from "./Index";
-import Navbar from "./Navbar";
 import Sidebar from "../sidebar/Index";
 import POLLS from "../../data/polls";
+import Navbar from "../common/Navbar";
+import Footer from "../common/Footer";
 
 class Main extends React.Component {
 	state = {
@@ -87,7 +88,7 @@ class Main extends React.Component {
 		return (
 			<div className="main">
 				<Navbar />
-				<Container className="mt-4">
+				<Container className="mt-4 height">
 					<Row>
 						<Col md={4}>
 							<Sidebar
@@ -108,6 +109,7 @@ class Main extends React.Component {
 						</Col>
 					</Row>
 				</Container>
+				<Footer/>
 			</div>
 		);
 	}
