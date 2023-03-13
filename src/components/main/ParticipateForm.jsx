@@ -1,5 +1,5 @@
 import React from "react";
-import {Form, FormGroup, FormFeedback, Input, Button, Label} from "reactstrap";
+import { Button, Form, FormFeedback, FormGroup, Input, Label } from "reactstrap";
 
 class ParticipateForm extends React.Component {
 	state = {

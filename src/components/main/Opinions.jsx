@@ -1,5 +1,5 @@
 import React from "react";
-import {Table} from "reactstrap";
+import { Table } from "reactstrap";
 
 const Opinion = ({opinions}) => {
 	if (opinions.length > 0) {
