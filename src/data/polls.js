@@ -16,7 +16,7 @@ const polls = [
 	{
 		id: "PPBqWA2",
 		title: "Which frontend frameworks do you like most?",
-		description: "There are tons of programming frameworks. Among them what is your favorite?",
+		description: "There are tons of programming frameworks. Among them which one is your favorite?",
 		options: [
 			{ id: "P5BqWA9", value: "React", vote: 0 },
 			{ id: "P6BqWA9", value: "Angular", vote: 0 },
@@ -29,7 +29,7 @@ const polls = [
 	{
 		id: "PPBqWA3",
 		title: "Which backend framework do you like most?",
-		description: "There are tons of backend frameworks. Among them what is your favorite?",
+		description: "There are tons of backend frameworks. Among them which one is your favorite?",
 		options: [
 			{ id: "P9BqWA9", value: "Express", vote: 0 },
 			{ id: "P10qWA9", value: "Spring Boot", vote: 0 },
