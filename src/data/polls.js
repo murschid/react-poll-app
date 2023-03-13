@@ -2,7 +2,7 @@ const polls = [
 	{
 		id: "PPBqWA1",
 		title: "What is your favorite programming language?",
-		description: "There are tons of programming languages. Among them what is your favorite?",
+		description: "There are tons of programming languages. Among them which one is your favorite?",
 		options: [
 			{ id: "P1BqWA9", value: "JavaScript", vote: 0 },
 			{ id: "P2BqWA9", value: "PHP", vote: 0 },
@@ -16,7 +16,7 @@ const polls = [
 	{
 		id: "PPBqWA2",
 		title: "Which frontend frameworks do you like most?",
-		description: "There are tons of programming frameworks. Among them which one is your favorite?",
+		description: "There are tons of frontend frameworks. Among them which one is your favorite?",
 		options: [
 			{ id: "P5BqWA9", value: "React", vote: 0 },
 			{ id: "P6BqWA9", value: "Angular", vote: 0 },

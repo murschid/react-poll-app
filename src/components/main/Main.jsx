@@ -12,7 +12,6 @@ class Main extends React.Component {
 		polls: [],
 		selectedPoll: {},
 		searchTerm: "",
-		isOpen: false,
 	};
 
 	componentDidMount() {
@@ -75,12 +74,6 @@ class Main extends React.Component {
 		};
 		poll.opinions.push(opinion);
 		this.setState({ polls });
-	};
-
-	toggleNavbar = () => {
-		this.setState({
-			isOpen: !this.state.isOpen,
-		});
 	};
 
 	render() {

@@ -51,7 +51,6 @@ class ParticipateForm extends React.Component {
 	}
 
 	render () {
-		console.log(this.props.poll.options);
 		return (
 			<Form onSubmit={this.handleSubmit}>
 				<div className="d-flex">

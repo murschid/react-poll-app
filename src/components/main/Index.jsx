@@ -18,9 +18,9 @@ class MainContent extends React.Component {
 	render() {
 		if (Object.keys(this.props.poll).length === 0) {
 			return (
-				<div>
+				<div className="p-3 bg-light">
 					<h3 className="text-uppercase fw-bolder">Welcome To My Poll Application</h3>
-					<p>some demo text text</p>
+					<p>It's a simple poll app by using core react technologies. This application is build just for React practice purpose.</p>
 				</div>
 			);
 		}
