@@ -1,6 +1,7 @@
 import React from "react";
 import { Modal, ModalBody, ModalHeader } from "reactstrap";
 import PollForm from "../forms/Index";
+import Opinion from "./Opinions";
 import ParticipateForm from "./ParticipateForm";
 
 class MainContent extends React.Component {
@@ -51,10 +52,7 @@ class MainContent extends React.Component {
 						/>
 					</ModalBody>
 				</Modal>
-				<hr/>
-				<div className="mt-1">
-					<h5 className="text-uppercase">Your Opinions Are Here</h5>
-				</div>
+				<Opinion opinions={poll.opinions} />
 			</div>
 		);
 	}
