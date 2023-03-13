@@ -51,6 +51,7 @@ class ParticipateForm extends React.Component {
 	}
 
 	render () {
+		console.log(this.props.poll.options);
 		return (
 			<Form onSubmit={this.handleSubmit}>
 				<div className="d-flex">
@@ -61,7 +62,7 @@ class ParticipateForm extends React.Component {
 				{this.props.poll.options.map((opt, index) => (
 					<FormGroup className="my-2" key={index}>
 						<Label className="d-flex">
-							<Input type="radio" className="me-2" id={opt.id} name="selectedOption" value={opt.id} onChange={this.handleChange} invalid={this.state.errors.selectedOption ? true : false}/> {opt.value}
+							<Input type="radio" className="me-2" id={opt.id} name="selectedOption" value={opt.value} onChange={this.handleChange} invalid={this.state.errors.selectedOption ? true : false}/> {opt.value}
 							<span className="ms-auto rounded px-3 py-1 bg-success text-white">{opt.vote}</span>
 							<span className="ms-2 rounded px-3 py-1 bg-warning" color="white">{this.props.poll.totalVote > 0 ? ((100 * opt.vote) / this.props.poll.totalVote).toFixed(2) : 0} %</span>
 						</Label>

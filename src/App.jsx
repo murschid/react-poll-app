@@ -55,9 +55,10 @@ class App extends React.Component {
 	}
 
 	getOpinion = (response) => {
+		console.log(response);
 		const { polls } = this.state;
 		const poll = polls.find((p) => p.id === response.pollId);
-		const option = poll.options.find((opt) => opt.id === response.selectedOption);
+		const option = poll.options.find((opt) => opt.value === response.selectedOption);
 		poll.totalVote++;
 		option.vote++;
 		const opinion = {

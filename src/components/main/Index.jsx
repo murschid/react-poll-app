@@ -26,32 +26,34 @@ class MainContent extends React.Component {
 		}
 		const { poll, getOpinion, updatePoll, deletePoll } = this.props;
 		return (
-			<div className="bg-light p-3">
-				<h3>{poll.title}</h3>
-				<p>{poll.description}</p>
-				<br />
-				<ParticipateForm
-					poll={poll}
-					getOpinion={getOpinion}
-					toggleModal={this.toggleModal}
-					deletePoll={deletePoll}
-				/>
-				<Modal
-					isOpen={this.state.openModal}
-					toggle={this.toggleModal}
-					unmountOnClose={true}>
-					<ModalHeader toggle={this.toggleModal}>
-						Update Poll
-					</ModalHeader>
-					<ModalBody>
-						<PollForm
-							poll={poll}
-							submit={updatePoll}
-							buttonValue="Update Poll"
-							isUpdate={true}
-						/>
-					</ModalBody>
-				</Modal>
+			<div>
+				<div className="bg-light p-3">
+					<h3>{poll.title}</h3>
+					<p>{poll.description}</p>
+					<br />
+					<ParticipateForm
+						poll={poll}
+						getOpinion={getOpinion}
+						toggleModal={this.toggleModal}
+						deletePoll={deletePoll}
+					/>
+					<Modal
+						isOpen={this.state.openModal}
+						toggle={this.toggleModal}
+						unmountOnClose={true}>
+						<ModalHeader toggle={this.toggleModal}>
+							Update Poll
+						</ModalHeader>
+						<ModalBody>
+							<PollForm
+								poll={poll}
+								submit={updatePoll}
+								buttonValue="Update Poll"
+								isUpdate={true}
+							/>
+						</ModalBody>
+					</Modal>
+				</div>
 				<Opinion opinions={poll.opinions} />
 			</div>
 		);

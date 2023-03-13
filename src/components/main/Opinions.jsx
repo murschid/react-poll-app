@@ -4,8 +4,7 @@ import {Table} from "reactstrap";
 const Opinion = ({opinions}) => {
 	if (opinions.length > 0) {
 		return (
-			<div>
-				<hr/>
+			<div className="bg-light mt-4 p-3">
 				<div className="mt-1">
 					{/* <h5 className="text-uppercase">Opinions Are Here</h5> */}
 					<Table>
