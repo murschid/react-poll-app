@@ -2,7 +2,7 @@ import React from "react";
 import { ListGroup, ListGroupItem } from "reactstrap";
 
 const PollList = (props) => {
-	(props.polls.length === 0) && <p>There is no poll</p>;
+	if (props.polls.length === 0) { return <p className="text-uppercase">There is no poll to show here</p> };
 	return (
 		<ListGroup>
 			{props.polls.map((poll, index) => (
