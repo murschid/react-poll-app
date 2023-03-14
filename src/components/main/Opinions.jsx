@@ -1,7 +1,7 @@
 import React from "react";
 import { Table } from "reactstrap";
 
-function Opinion({ opinions }) {
+const Opinion = ({ opinions }) => {
     if (opinions.length > 0) {
         return (
             <div className="bg-light mt-4 px-3 pb-3">
