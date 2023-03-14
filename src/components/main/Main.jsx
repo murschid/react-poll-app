@@ -1,11 +1,11 @@
 import React from "react";
 import { Col, Container, Row } from "reactstrap";
 import shortid from "shortid";
-import MainContent from "./Index";
-import Sidebar from "../sidebar/Index";
 import POLLS from "../../data/polls";
-import Navbar from "../common/Navbar";
 import Footer from "../common/Footer";
+import Navbar from "../common/Navbar";
+import Sidebar from "../sidebar/Index";
+import MainContent from "./Index";
 
 class Main extends React.Component {
 	state = {

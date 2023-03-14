@@ -6,12 +6,12 @@ import ParticipateForm from "./ParticipateForm";
 
 class MainContent extends React.Component {
 	state = {
-		openModal: false,
+		openModal: false
 	};
 
 	toggleModal = () => {
 		this.setState({
-			openModal: !this.state.openModal,
+			openModal: !this.state.openModal
 		});
 	};
 
